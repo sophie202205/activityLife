@@ -88,6 +88,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Log.v("brad", "onActivityResult");
+        int key1 = data.getIntExtra("Key1", -1);
+        String key = data.getStringExtra("Key2");
+        Log.v("brad",  key1 + ":"  + key);
+        Log.v("brad", "onActivityResult = " + requestCode + ":"  + resultCode);
     }
 }
