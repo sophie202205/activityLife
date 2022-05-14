@@ -6,15 +6,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    private EditText inputName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.v("brad", "onCreate");
+
+        inputName = findViewById(R.id.inputName);
     }
 
     @Override
@@ -65,6 +69,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void test2(View view) {
         Intent intent = new Intent(this, Page2.class);
+        startActivity(intent);
+    }
+
+    public void test3(View view) {
+        String name = inputName.getText().toString();
+        Intent intent = new Intent(this, Page2.class);
+        intent.putExtra("name", name);
         startActivity(intent);
     }
 }

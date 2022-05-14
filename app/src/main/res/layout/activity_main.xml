@@ -21,4 +21,16 @@
         android:onClick="test2">
     </Button>
 
+    <EditText
+        android:id="@+id/inputName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </EditText>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="test3"
+        android:onClick="test3">
+    </Button>
 </LinearLayout>
