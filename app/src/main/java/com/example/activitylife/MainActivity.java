@@ -1,5 +1,6 @@
 package com.example.activitylife;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -77,5 +78,16 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Page2.class);
         intent.putExtra("name", name);
         startActivity(intent);
+    }
+
+    public void test4(View view) {
+        Intent intent = new Intent(this, Page2.class);
+        startActivityForResult(intent, 475);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Log.v("brad", "onActivityResult");
     }
 }
