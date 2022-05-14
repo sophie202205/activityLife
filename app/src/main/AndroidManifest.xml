@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ActivityLife">
         <activity
+            android:name=".Page3"
+            android:exported="false" />
+        <activity
             android:name=".Page2"
             android:exported="false" />
         <activity
